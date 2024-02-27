@@ -1,6 +1,8 @@
 ---
 title: "first_repo"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 date: "2024-02-27"
 ---
 
@@ -8,11 +10,16 @@ date: "2024-02-27"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-My *first* version controlled project in RStudio
+This report documents my first attempts of using GitHub to version control an RStudio Project.
 
-Let's create a test plot
+Let's create a plot of distance (miles) and speed (mph)
  
 ```{r, test-plot}
  plot(cars)
 ```
- 
+A summary of the data frame is given below
+
+```{r,cars-summary}
+library(knitr)
+kable(summary(cars))
+```
